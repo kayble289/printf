@@ -19,7 +19,7 @@ void _printf(const char *format, ...)
 				putchar(*format);
 			}
 		}
-	} else if(State == 1) {
+	} if(State == 1) {
 		switch(*format) {
 			case 'c': 
 					  putchar(va_arg(args, char));
@@ -58,5 +58,5 @@ void main()
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
-	return (0);
+	return (void);
 }
