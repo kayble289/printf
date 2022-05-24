@@ -1,23 +1,22 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include "cfun.h"
+#include <unistd.h>
+#include <stdio.h>
+
 int _printf(const char *format, ...);
+int _putchar(char c); 
+
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
- */
-int _strlen(char *s)
+ ** _putchar - entry point
+ **
+ **
+ ** Return: 0 (Success)
+ **/
+int _putchar(char c)
 {
-	int i;
-
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
+        return (write(1, &c, 1));
 }
+
 #endif
